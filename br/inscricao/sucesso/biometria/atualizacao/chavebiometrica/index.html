@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Inscrição Concluída - CNH Social</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f4f6f9;
+    }
+
+    .container {
+      max-width: 100%;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .alert-box {
+      background: #eafaf1;
+      border-left: 5px solid #27ae60;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .alert-box h1 {
+      color: #1e8449;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .alert-box p {
+      color: #2c3e50;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .gov-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1351b4;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      width: 100%;
+      border: none;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gov-btn:hover {
+      background-color: #0f3d91;
+    }
+
+    .gov-btn img {
+      height: 18px;
+      margin-right: 6px;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 16px auto;
+      max-width: 140px;
+      width: 60%;
+      height: auto;
+    }
+
+    .chave-box {
+      background: #ffffff;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      word-break: break-word;
+    }
+
+    @media (min-width: 400px) {
+      .alert-box h1 {
+        font-size: 1.6rem;
+      }
+      .alert-box p {
+        font-size: 1rem;
+      }
+      .gov-btn {
+        font-size: 1rem;
+        padding: 14px;
+      }
+      .logo {
+        max-width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/9EQ0WCqrLjKA.webp" alt="Logo Gov" class="logo" />
+
+    <div class="alert-box">
+      <h1>✅ Inscrição Realizada com Sucesso!</h1>
+      <p>Sua solicitação para o programa <strong>CNH Social</strong> foi processada com sucesso.</p>
+      <p>Em até <strong>30 dias úteis</strong> você receberá um e-mail oficial com instruções para o <strong>DETRAN da sua cidade</strong> sobre entrega de documentos e geração do RENAVAM.</p>
+      <p>Copie e guarde sua <strong>Chave Biométrica</strong> de validação:</p>
+      <div class="chave-box" id="chaveBiometria">AWB-G3827Y</div>
+      <button class="gov-btn" onclick="copiarChave()">
+        <img src="https://www.gov.br/favicon.ico" alt="Ícone Gov.br"> Copiar Chave Biométrica
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function copiarChave() {
+      const chave = document.getElementById("chaveBiometria").innerText;
+      navigator.clipboard.writeText(chave).then(() => alert("Chave copiada com sucesso!"))
+        .catch(() => alert("Erro ao copiar a chave."));
+    }
+  </script>
+</body>
+</html>

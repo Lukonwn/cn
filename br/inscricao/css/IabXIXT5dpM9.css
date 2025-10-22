@@ -1,0 +1,273 @@
+#barra-brasil div,
+#barra-brasil a,
+#barra-brasil ul,
+#barra-brasil li {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	font-size: 1rem
+}
+
+#barra-brasil ul {
+	list-style: none
+}
+
+#barra-brasil {
+	background-color: #1351B4;
+	box-sizing: content-box;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+
+}
+
+#barra-brasil .conteudo-barra-brasil {
+	padding-top: 2px;
+	height: 40px;
+	width: 95%;
+	max-width: 100vw;
+	margin: 0 auto;
+	height: 40px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between
+}
+
+#barra-brasil .pic-gov {
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2266%22%20height%3D%2214%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M9.367%204.374V.247H.37v4.127h8.997z%22%2F%3E%3C%2Fdefs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M7.602%2011.174a3.693%203.693%200%200%201-2.45.896c-.644%200-1.26-.114-1.848-.343a4.416%204.416%200%200%201-1.54-1.001%204.863%204.863%200%200%201-1.05-1.61C.453%208.481.322%207.758.322%206.946a4.851%204.851%200%200%201%201.47-3.521%205.092%205.092%200%200%201%201.617-1.05%205.205%205.205%200%200%201%202.009-.385c.448%200%20.877.049%201.288.147a4.495%204.495%200%200%201%202.086%201.12c.28.266.509.567.686.903l-2.03%201.554a2.289%202.289%200%200%200-.882-.945%202.362%202.362%200%200%200-1.246-.357%202.034%202.034%200%200%200-1.596.742c-.196.233-.35.511-.462.833a3.198%203.198%200%200%200-.168%201.057c0%20.392.056.747.168%201.064.112.317.268.59.469.819.2.229.441.406.721.532.28.126.593.189.938.189.793%200%201.493-.327%202.1-.98H5.768v-1.96h4.088V12H7.602v-.826zm8.078.91c-.756%200-1.442-.145-2.058-.434a5.092%205.092%200%200%201-2.604-2.758%205.008%205.008%200%200%201-.364-1.876c0-.653.126-1.283.378-1.89a5.018%205.018%200%200%201%201.057-1.603c.453-.462.99-.83%201.61-1.106.62-.275%201.3-.413%202.037-.413.756%200%201.442.145%202.058.434.616.29%201.143.672%201.582%201.148a5.151%205.151%200%200%201%201.015%201.624c.238.607.357%201.227.357%201.862a4.83%204.83%200%200%201-.378%201.883%205.1%205.1%200%200%201-1.05%201.596%205.165%205.165%200%200%201-1.603%201.113c-.62.28-1.3.42-2.037.42zm-2.254-5.04c0%20.336.047.66.14.973.093.313.233.59.42.833.187.243.422.439.707.588.285.15.623.224%201.015.224.392%200%20.733-.077%201.022-.231a2.07%202.07%200%200%200%20.707-.602%202.59%202.59%200%200%200%20.406-.847c.089-.317.133-.64.133-.966%200-.336-.047-.66-.14-.973a2.397%202.397%200%200%200-.427-.826%202.156%202.156%200%200%200-.714-.574%202.182%202.182%200%200%200-1.001-.217c-.392%200-.73.075-1.015.224-.285.15-.52.348-.707.595a2.523%202.523%200%200%200-.413.84%203.498%203.498%200%200%200-.133.959zM23.828%202.06l1.946%206.51%201.918-6.51h2.87L26.908%2012H24.64l-3.696-9.94h2.884zM55.82%209.438c0%20.383-.077.733-.231%201.05a2.444%202.444%200%200%201-.63.812%202.887%202.887%200%200%201-.924.518c-.35.121-.726.182-1.127.182H48.19V2.06h4.942c.345%200%20.658.075.938.224.28.15.518.343.714.581.196.238.348.509.455.812.107.303.161.609.161.917%200%20.495-.124.952-.371%201.372-.247.42-.6.733-1.057.938.57.168%201.02.478%201.351.931.331.453.497.987.497%201.603zm-1.274-.224c0-.224-.04-.441-.119-.651a1.852%201.852%200%200%200-.322-.553%201.525%201.525%200%200%200-.483-.378%201.358%201.358%200%200%200-.616-.14H49.45v3.416h3.458c.233%200%20.448-.047.644-.14.196-.093.369-.217.518-.371a1.68%201.68%200%200%200%20.35-.539c.084-.205.126-.42.126-.644zM49.45%203.152V6.47h3.164c.224%200%20.43-.044.616-.133.187-.089.348-.208.483-.357.135-.15.243-.324.322-.525.08-.2.119-.413.119-.637a1.91%201.91%200%200%200-.112-.658%201.736%201.736%200%200%200-.301-.532%201.37%201.37%200%200%200-1.043-.476H49.45zM57.584%2012V2.06h4.256c.439%200%20.842.091%201.211.273.369.182.686.425.952.728.266.303.474.644.623%201.022.15.378.224.763.224%201.155%200%20.345-.049.679-.147%201.001a3.098%203.098%200%200%201-.42.875%202.812%202.812%200%200%201-.658.672%202.566%202.566%200%200%201-.861.406L65.172%2012h-1.428l-2.268-3.57h-2.632V12h-1.26zm1.26-4.69h3.01c.261%200%20.497-.056.707-.168.21-.112.39-.264.539-.455.15-.191.266-.413.35-.665.084-.252.126-.513.126-.784%200-.28-.049-.544-.147-.791a2.322%202.322%200%200%200-.392-.658%201.774%201.774%200%200%200-.574-.448%201.557%201.557%200%200%200-.693-.161h-2.926v4.13z%22%20fill%3D%22%23FFF%22%2F%3E%3Cpath%20fill%3D%22%23FFD400%22%20d%3D%22M35.145%200L46%206.875%2035.145%2013.75z%22%2F%3E%3Cpath%20d%3D%22M36.233%2011.177a4.293%204.293%200%200%200%204.3-4.3%204.293%204.293%200%200%200-4.3-4.302%204.293%204.293%200%200%200-4.301%204.301%204.293%204.293%200%200%200%204.3%204.301%22%20fill%3D%22%231675D3%22%2F%3E%3Cg%20transform%3D%22matrix(-1%200%200%201%2041%204.75)%22%3E%3Cmask%20id%3D%22b%22%20fill%3D%22%23fff%22%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%2F%3E%3C%2Fmask%3E%3Cpath%20d%3D%22M8.76.538C4.918-.46%202.19%201.288.533%203c-.267.248-.276.953.5%201.375%203.554-3.313%206.797-2.9%208.035-2.185.397%200%20.494-1.409-.308-1.65%22%20fill%3D%22%23FFF%22%20mask%3D%22url(%23b)%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+	background-repeat: no-repeat;
+	display: block;
+	width: 66px;
+	height: 14px;
+	min-width: 66px;
+	margin-right: 10px;
+	line-height: 0;
+	font-size: 0;
+	color: transparent
+}
+
+#barra-brasil .conteudo-barra-brasil nav {
+	overflow-x: auto
+}
+
+#barra-brasil .conteudo-barra-brasil nav ul {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: auto;
+	max-width: none
+}
+
+#barra-brasil .conteudo-barra-brasil nav ul li.list-item {
+	flex-shrink: 0
+}
+
+#barra-brasil .conteudo-barra-brasil nav ul li.espacador {
+	height: 20px;
+	width: 1px;
+	border-right: 1px solid rgba(151, 151, 151, 0.3);
+	margin: 0 7px 0 20px
+}
+
+#barra-brasil a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 0.7em;
+	font-family: Raleway, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	transition-property: all;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out
+}
+
+#barra-brasil .conteudo-barra-brasil nav a.link-externo-barra::before {
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 10px;
+	margin-right: 6px;
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2210%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M10.174.169l-.003%204.002L6.173.173z%22%2F%3E%3Cpath%20d%3D%22M4%204.51L7.91.6l1.768%201.768-3.91%203.91zM0%200h3.5v2.5H0z%22%2F%3E%3Cpath%20d%3D%22M0%202h2.5v5H0zM7.5%206H10v3H7.5z%22%2F%3E%3Cpath%20d%3D%22M0%207h10v2.5H0z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+	opacity: 0;
+	transition-property: all;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out
+}
+
+#barra-brasil .conteudo-barra-brasil nav a.link-discreto,
+#barra-brasil .conteudo-barra-brasil nav a.link-discreto-fixo,
+#barra-brasil .conteudo-barra-brasil nav:hover li:not(:hover)>a {
+	opacity: 0.3
+}
+
+#barra-brasil .conteudo-barra-brasil nav a:hover {
+	opacity: 1
+}
+
+#barra-brasil .conteudo-barra-brasil nav a.link-externo-barra:hover::before {
+	opacity: 1
+}
+
+#barra-brasil .conteudo-barra-brasil nav a.link-interno-barra {
+	margin-left: 13px
+}
+
+#barra-brasil .conteudo-barra-brasil nav a.link-baixo-barra::after {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-left: 6px;
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M1.9.033L8.4%206.531%206.63%208.3.133%201.801z%22%2F%3E%3Cpath%20d%3D%22M11.395%200L5.03%206.364l1.767%201.768%206.364-6.364z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 8px 6px;
+	background-color: #3b3b3b;
+	border-radius: 50%
+}
+
+#barra-brasil .conteudo-barra-brasil nav a.link-baixo-barra.link-cima-barra::after {
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M1.9%208.967L8.4%202.469%206.63.7.133%207.199z%22%2F%3E%3Cpath%20d%3D%22M11.395%209L5.03%202.636%206.798.868l6.364%206.364z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+}
+
+#barra-brasil .conteudo-barra-brasil a.botao-seta-direita {
+	display: none;
+	width: 9px;
+	min-width: 9px;
+	margin-left: 10px;
+	height: 13px;
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2213%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M.533%2011.232L7.03%204.734%208.8%206.502%202.301%2013z%22%2F%3E%3Cpath%20d%3D%22M.5%201.738l6.364%206.364%201.768-1.768L2.268-.03z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+	line-height: 0;
+	font-size: 0;
+	color: transparent
+}
+
+#barra-brasil .orgaos-governo-barra {
+	width: 100%;
+	border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+	max-height: 0;
+	overflow-y: hidden;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out
+}
+
+#barra-brasil .orgaos-governo-barra.mostra-orgaos {
+	max-height: calc(90vh - 40px)
+}
+
+#barra-brasil .orgaos-governo-barra>div {
+	width: 100%;
+	max-width: 1150px;
+	margin: 0 auto
+}
+
+#barra-brasil .orgaos-governo-barra ul {
+	margin-top: 25px;
+	width: calc(100% + 25px);
+	display: flex;
+	flex-flow: row wrap
+}
+
+#barra-brasil .orgaos-governo-barra ul li {
+	width: 168px;
+	text-align: left;
+	margin: 0 25px 25px 0
+}
+
+#barra-brasil .orgaos-governo-barra ul li a {
+	font-size: 0.75em;
+	text-transform: none;
+	font-weight: bold
+}
+
+#barra-brasil .orgaos-governo-barra ul:hover li:not(:hover) a {
+	opacity: 0.3
+}
+
+#barra-brasil .orgaos-governo-barra ul li a:hover {
+	font-weight: bold
+}
+
+@media only screen and (max-width: 600px) {
+	#barra-brasil .orgaos-governo-barra {
+		overflow-y: auto
+	}
+
+	#barra-brasil .orgaos-governo-barra ul {
+		width: 100%;
+		flex-flow: column nowrap
+	}
+
+	#barra-brasil .orgaos-governo-barra ul li {
+		width: 100%;
+		margin: 0 0 25px 0
+	}
+
+	#barra-brasil .conteudo-barra-brasil a.botao-seta-direita {
+		display: block
+	}
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: url(../images/13aYbJr0R7Di.png) repeat !important;
+}
+
+.logo-gov {
+    padding: 0px !important;
+    height: 40px !important;
+    object-fit: contain !important;
+    margin-top: 20px !important;
+    cursor: pointer !important;
+    z-index: 9 !important;
+}
+
+.container-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-typebot {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 100vw;
+    overflow: hidden;
+
+    max-width: 900px !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.2) !important;
+    height: calc(100% - 150px) !important;
+}
+.card-typebot iframe {
+    width: 100%;
+    height: 95%;
+    margin-top: 15px;
+    min-height: 700px;
+    border: none;
+}
+.card-typebot .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: rgb(8, 103, 184);
+    justify-content: center;
+
+	font-size: 14px;
+	padding: 5px 0px;
+}
+.card-typebot .footer span {
+    display: flex;
+    gap: 10px;
+}

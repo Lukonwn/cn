@@ -1,0 +1,887 @@
+@charset "UTF-8";
+@import "../govbr-colors.html";
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.warn-message {
+    padding: 10px;
+    color: var(--color-gray-7);
+    background: var(--color-warning);
+    border-radius: 6px;
+    width: 100%;
+}
+
+#divMsgLevel .warn-message span {
+    font-size: 14px;
+}
+
+.labelPassword {
+    margin: 20px 0 5px 0;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.level-weak {
+    width: 25%;
+    height: 10px;
+    display: inline-block;
+    background: #8A0303;
+    margin-top: 5px;
+}
+
+.level-good {
+    width: 50%;
+    height: 10px;
+    display: inline-block;
+    background: #cc0000;
+    margin-top: 5px;
+}
+
+.level-average {
+    width: 75%;
+    height: 10px;
+    display: inline-block;
+    background: orange;
+    margin-top: 5px;
+}
+
+.level-strong {
+    width: 100%;
+    height: 10px;
+    display: inline-block;
+    background: #68ca6e;
+    margin-top: 5px;
+}
+
+.container-vertical {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cpfChangePassword {
+    display: block;
+    margin: 10px 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'rawline', Rawline, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333333;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 20px 0;
+}
+
+a {
+    color: #333333;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+input:focus {
+    background-color: rgba(242, 227, 23, 0.3);
+}
+
+input.is-invalid {
+    border-color: #ff3333;
+    box-shadow: 0 0 0 1px #ff3333;
+    outline: none;
+}
+
+::placeholder {
+    opacity: 1;
+    /* Firefox */
+    font-style: italic;
+    font-size: 90%;
+}
+
+#login-password a,
+#faq a,
+#authorize-info a {
+    color: #1351B4;
+    text-decoration: underline;
+}
+
+#footer-brasil {
+    background-color: #071d41 !important;
+}
+
+#footer-brasil .logo-acesso-footer {
+    background-image: url(../acesso-informacao-logo-contraste.html) !important;
+    background-size: contain;
+}
+
+#footer-brasil .logo-governo-federal {
+    background-image: url(../governo-federal-contraste.html) !important;
+    background-size: contain;
+}
+
+#modal-hint-twofactor-id a {
+    font-family: 'rawline', Rawline, serif;
+    font-size: 1rem;
+    color: #1351B4;
+    font-weight: 700;
+}
+
+.contrast #footer-brasil {
+    background-color: black !important;
+}
+
+p {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+label {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px 0 20px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    border: 1px solid #888888;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+select {
+    width: auto;
+}
+
+.container {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;
+    min-height: calc(100vh - 254px);
+}
+
+header {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px #00000029;
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+main {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex: 1 0 50%;
+    flex-direction: column;
+}
+
+#main-signin {
+    flex: 1 0 38% !important;
+}
+
+aside {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex: 1 0 50%;
+    flex-direction: column;
+}
+
+#aside-signin {
+    flex: 1 0 60% !important;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+#acessibilidade a,
+#acessibilidade span {
+    margin: 10px 10px 0 10px;
+}
+
+#acessibilidade div {
+    margin-right: 25px;
+}
+
+#acessibilidade i {
+    margin: 0 0.2em 0 0;
+}
+
+#acessibilidade a {
+    color: #333333;
+    ;
+}
+
+header img {
+    width: 100px;
+    margin: 10px;
+}
+
+.card {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff 0 0 no-repeat padding-box;
+    box-shadow: 0 2px 4px #00000033;
+    padding: 20px;
+    margin: 20px auto auto auto;
+}
+
+.card span {
+    flex: 1 0 60%;
+}
+
+.card img {
+    /*flex: 1 0 20%;*/
+    max-height: 211px;
+    max-width: 279px;
+}
+
+.card a {
+    flex: 1 1 100%;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+main h5 i {
+    margin: 0 10px 0 20px;
+}
+
+button {
+    border: none;
+    box-shadow: 0 2px 3px #00000029;
+    border-radius: 24px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+aside .button-panel {
+    width: 329px;
+    height: 80px;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #EDEDED 0 0 no-repeat padding-box;
+    box-shadow: 0 2px 3px #00000029;
+    border-radius: 40px;
+    margin-top: 40px;
+}
+
+main .button-panel {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 30px 0 25px 0;
+}
+
+.button-create-account {
+    width: 289px;
+    height: 48px;
+    background: #268744 0 0 no-repeat padding-box;
+}
+
+.button-cancel,
+.button-cancel-tertiary,
+.button-ok,
+.button-continuar {
+    width: 145px;
+    height: 40px;
+}
+
+.button-ok,
+.button-continuar {
+    background: #1351B4 0 0 no-repeat padding-box;
+}
+
+.button-cancel {
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    color: #1351B4 !important;
+    border: 1px solid #1351B4 !important;
+}
+
+.button-cancel-tertiary {
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    color: #1351B4 !important;
+    border: none;
+    box-shadow: none;
+}
+
+.button-continuar.loading {
+    color: transparent !important;
+    position: relative;
+}
+
+.button-continuar.loading::after {
+    animation: spin 1.3s infinite linear;
+    border: 2px solid white;
+    border-radius: 50%;
+    border-right-color: transparent;
+    content: "";
+    display: block;
+    height: 1.2em;
+    left: calc(50% - 0.6em);
+    position: absolute;
+    top: calc(50% - 0.6em);
+    width: 1.2em;
+}
+
+.button-href-mimic2.loading::after {
+    animation: spin 1.3s infinite linear;
+    border: 2px solid #333;
+    border-radius: 50%;
+    border-right-color: transparent;
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    margin-left: 1ex;
+    display: inline-block;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.title-panel {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-panel {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.item-login-signup-ways {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: center;
+    margin: 20px 0 0 0;
+    cursor: pointer;
+}
+
+.item-login-signup-ways a img,
+.button-href-mimic2 img {
+    vertical-align: -0.40rem;
+    margin: 0 10px 0 0;
+}
+
+.entenda-id-govbr {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    text-align: center;
+    margin: 100px 0 0 0;
+    width: 100%;
+}
+
+#entenda-id-govbr-a,
+#termo-de-uso {
+    margin-left: 10px;
+    color: #1351B4;
+}
+
+#termo-de-uso {
+    display: block;
+    margin: 20px 0 0 0
+}
+
+i {
+    color: #1351B4;
+}
+
+.erro {
+    color: red;
+}
+
+.password-eye {
+    width: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.password-eye span {
+    flex: 1 0 0;
+    margin-left: -36px;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    padding: 2px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.alert-danger {
+    color: red;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    padding: 2px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 2px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+hr {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+.accordion-panel {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-height: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#login-cadastro,
+#login-password-info {
+    box-shadow: none;
+    max-width: 430px;
+    max-height: 553px;
+}
+
+#login-cpf,
+#login-password {
+    align-items: flex-start;
+    max-width: 384px;
+    min-height: 393px;
+}
+
+#login-password {
+    min-height: auto;
+}
+
+#login-cpf p,
+.modal-content p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 0.8rem;
+}
+
+#modal-cert-nuvem-button-panel,
+#modal-bancos-credenciados-button-panel {
+    margin: auto;
+}
+
+#faq {
+    box-shadow: none;
+    min-height: auto;
+    align-items: center;
+}
+
+#esqueci-senha {
+    margin: 28px 0 0 0;
+}
+
+.serprocaptcha-panel {
+    margin: 28px 0 0 0;
+}
+
+.serprocaptcha-image {
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 48px;
+}
+
+.serprocaptcha-reload-button {
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 36px;
+    width: 36px;
+    background-color: #1351b4;
+}
+
+.serprocaptcha-reload-button i {
+    font-size: 18px;
+    color: white;
+}
+
+.button-href-mimic {
+    background: none !important;
+    border: none;
+    box-shadow: none !important;
+    padding: 0 !important;
+    font-family: 'rawline', Rawline, serif;
+    font-weight: 500;
+    color: #1351b4;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.button-href-mimic2 {
+    background: none !important;
+    border: none;
+    box-shadow: none !important;
+    padding: 0 !important;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'rawline', Rawline, serif;
+    color: #333;
+    cursor: pointer;
+}
+
+.bnt-hint-twofactor {
+    margin-top: 1rem;
+}
+
+.msg-alertas {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+.ms {
+    width: 100%;
+    margin: auto;
+    padding: 1em;
+    float: left;
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'rawline', Rawline, serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.alerta {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    background-color: #FFFFBF;
+    color: #2b2b2b;
+}
+
+#password-recovery {
+    margin-top: 1em;
+}
+
+#authorize-info,
+#contact-validation {
+    align-items: flex-start;
+    max-width: 70%;
+}
+
+#contact-validation {
+    margin: 20px auto 20px auto;
+}
+
+#contact-validation input {
+    width: 70%;
+    margin: 0 20px 10px 0;
+}
+
+#contact-validation label {
+    margin: 20px 0 0 0;
+}
+
+#email-div,
+#sms-div {
+    width: 100%;
+}
+
+#confirmacao-contato {
+    margin-bottom: 2em;
+}
+
+#email-code,
+#sms-code {
+    width: auto;
+    margin: 0 0 0 10px;
+}
+
+#sms-code-ok,
+#email-code-ok {
+    text-align: center;
+}
+
+#btn-create-account-a {
+    display: block;
+}
+
+#btn-create-account-b {
+    display: none;
+}
+
+#login-button-panel {
+    justify-content: flex-end;
+}
+
+#two-factor {
+    align-items: flex-start;
+    width: 384px;
+    min-height: 270px;
+}
+
+#resendTwoFactorMsg {
+    margin-top: 1.1em;
+}
+
+#resendLink {
+    cursor: pointer;
+    color: blue;
+}
+
+#identidade-govbr {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#id-hint-twofactor-a {
+    color: #1351B4;
+}
+
+@media (max-width: 764px) {
+    #acessibilidade a,
+    #acessibilidade span {
+        margin: 0 10px 0 0;
+    }
+    #acessibilidade span a span {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 0.8rem;
+    }
+    .container {
+        flex-direction: column-reverse;
+    }
+    main {
+        flex: 0 0 100%;
+    }
+    footer {
+        display: none;
+    }
+    [vw] [vw-access-button] .access-button {
+        display: none;
+    }
+    .card {
+        padding: 10px;
+    }
+    #login-button-panel {
+        justify-content: space-evenly;
+    }
+    .button-continuar {
+        width: 100%;
+    }
+    .ms {
+        font-size: 0.8rem !important;
+    }
+    #login-cadastro,
+    #login-password-info,
+    #identidade-govbr {
+        display: none;
+    }
+    #btn-create-account-a {
+        display: none;
+    }
+    #btn-create-account-b {
+        display: block;
+    }
+    #login-cpf,
+    #login-password,
+    #two-factor {
+        max-width: 340px;
+    }
+    #acessibilidade a span {
+        display: none;
+    }
+    #acessibilidade a,
+    #acessibilidade span {
+        margin: 0 10px 0 0;
+    }
+    #authorize-info,
+    #contact-validation {
+        align-items: flex-start;
+        max-width: 100%;
+    }
+    #contact-validation input {
+        width: 100%;
+    }
+    #barra-brasil {
+        display: none !important;
+    }
+    #divMsgLevel .warn-message {
+        width: 100%;
+    }
+    #modal-hint-twofactor-id a {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (min-width: 998px) {
+    .container {
+        max-width: 992px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1440px;
+    }
+}

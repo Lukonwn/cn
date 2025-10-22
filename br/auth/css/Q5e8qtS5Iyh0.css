@@ -1,0 +1,107 @@
+.modal-cadastro,
+.modal-certificado-nuvem,
+.modal-bancos-credenciados,
+.modal-termo-uso,
+.modal-contato,
+.modal-qrcode,
+.modal-tips,
+.modal-hint-twofactor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content,
+.modal-content-termo-uso,
+.modal-content-contato {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 1em;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content .button-panel,
+.modal-content-termo-uso .button-panel,
+.modal-content-contato .button-panel {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 0 1rem 0;
+}
+
+/* Termo de uso */
+
+.modal-content-termo-uso {
+    width: 80%;
+}
+
+.modal-header {
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-body {
+    max-height: calc(100vh - 212px);
+    overflow-y: auto;
+    margin: 10px 10px 24px 10px;
+}
+
+.modal-footer {
+    padding: 5px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+#modal-hint-twofactor-id {
+    width: 30rem;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+#modal-hint-twofactor-id li {
+    margin-bottom: 10px;
+}
+
+/* Modal Contato */
+
+.modal-content-contato {
+    width: 35em;
+}
+
+@media (max-width: 800px) {
+    .modal-content-termo-uso,
+    .modal-content-contato {
+        width: 95%;
+    }
+    #modal-hint-twofactor-id {
+        width: 100%;
+        overflow-y: auto;
+        max-height: 100%;
+    }
+}
